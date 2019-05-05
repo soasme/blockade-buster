@@ -41,3 +41,7 @@ $ journalctl -f
 
 * Fast Open
 * Firewall Rules
+
+## Notes
+
+* Don't add `terraform.tfstate` and `terraform.tfvars` into the repo.
