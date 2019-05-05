@@ -23,7 +23,7 @@ resource "null_resource" "ss-setup" {
   "server_port": ${var.ss_server_port},
   "password": "${var.ss_password}",
   "timeout": ${var.ss_timeout},
-  "nameserver": "8.8.8.8",
+  "nameserver": "${var.ss_nameserver}",
   "method": "${var.ss_method}"
 }
 EOF
@@ -34,7 +34,6 @@ EOF
     inline = [
         "apt-get update",
         "apt-get install -y shadowsocks-libev python rng-tools",
-        "${local.setup_ss_config}",
     ]
   }
 
