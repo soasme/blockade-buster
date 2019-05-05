@@ -1,6 +1,6 @@
 # blockade-buster
 
-Quickly launch a ss-server on DigitalOcean.
+Quickly launch an ss-server on a DigitalOcean host.
 
 ## Getting Started
 
