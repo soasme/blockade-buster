@@ -8,16 +8,6 @@ resource "digitalocean_droplet" "ss" {
   ssh_keys = "${var.do_ssh_keys}"
 }
 
-locals {
-  setup_ss_config = <<EOF
-python -c '
-import json
-print(json.dumps({
-}))
-' > /etc/shadowsocks.json
-EOF
-}
-
 resource "null_resource" "ss-setup" {
 
   connection {
